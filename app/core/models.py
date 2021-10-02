@@ -69,7 +69,7 @@ class Recipe(models.Model):
         on_delete=models.CASCADE,
     )
     title = models.CharField(max_length=255)
-    time_minutes = models.SmallIntegerField(max_length=3)
+    time_minutes = models.SmallIntegerField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
     link = models.CharField(max_length=255, blank=True)
     ingredients = models.ManyToManyField('Ingredient')
